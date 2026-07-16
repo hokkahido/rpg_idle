@@ -4,11 +4,13 @@ Game bergenre *Text-Based Idle RPG / Auto-Battler* berbasis **Elixir + Phoenix L
 
 ## ✨ Fitur
 
-- **Database Permanen** (PostgreSQL + Ecto) — Data karakter tersimpan, auto-save saat masuk dungeon, keluar, atau mati
+- **Database Permanen** (PostgreSQL + Ecto) — 4 tabel: characters, items, character_items. Auto-save saat masuk dungeon, keluar, atau mati
 - **Combat Loop di Memori** (Elixir GenServer) — Setiap dungeon berjalan di proses independen, tick otomatis setiap 500ms
 - **Real-time Animasi CSS** — Karakter bernafas (`:idle`), meluncur maju (`:attacking`), gempar merah (`:hit`)
-- **Loot Drop & Equipment** — Monster menjatuhkan senjata, armor, dan aksesoris dengan berbagai rarity (common → epic)
-- **Inventory & Equip System** — Pakai/lepas equipment, stats hero meningkat secara real-time
+- **Loot Drop & Equipment** — 24 item: senjata, armor, aksesoris. Rarity: common → uncommon → rare → epic
+- **Inventory & Equip System** — Klik **Pakai** untuk equip, **Lepas** untuk ganti. Bonus stats langsung terlihat di ATK dan Max HP
+- **Respawn Otomatis** — Hero mati? Tinggal klik **Masuk Dungeon** lagi, GenServer restart otomatis tanpa refresh
+- **Total Stats Display** — ATK menampilkan total (base + equipment bonus) dengan indikator hijau
 - **Dark Mode RPG** — Gradien gelap dengan aksen emas, pixel art via DiceBear, Bootstrap Icons
 
 ## 🚀 Cara Menjalankan
