@@ -1,0 +1,7 @@
+defmodule RpgIdleWeb.PageController do
+  use RpgIdleWeb, :controller
+
+  def home(conn, _params) do
+    render(conn, :home)
+  end
+end
